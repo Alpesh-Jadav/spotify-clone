@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import Login from './Login';
 
 function App() {
+
   return (
-    <div className="App">
-     <h1>let's build SPOTIFY CLONE  </h1>
-     
+    <div className="app">
+
+     <Login />
+
     </div>
   );
 }
