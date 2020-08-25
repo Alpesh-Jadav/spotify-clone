@@ -1,11 +1,12 @@
 
 export const initialState = {
-    user: null,
+    user: 'Alpesh Jadav',
     playlists: [],
     playing: false,
     item: null,
-    token: "BQASGlkrI5Sbh2lqDU8TKpu3VUmp1ANXwKZKxRv8QHZ_lw2QoYhQWs4Wri1BV_5PezeacJN-vfusS5fSlxBXJ9pIAdsUqOyV8RddzlbM5Zw2si4GLcCUU9oObdkpJXgvQo1WnDD3w5b4WfzBjCRwio7x3PGSpBc"
-    // IMP NOTICE: After production of this project , set the above token value to null. 
+    discover_weekly: null,
+    token: null, 
+    // IMP NOTICE: After production of this project , set the above user value to null. 
     // So every user first go through spotify user autehentication
 };
 
@@ -28,6 +29,11 @@ export const initialState = {
                     ...state,
                     playlists: action.playlists
                 }
+                case 'SET_DISCOVER_WEEKLY':
+                    return {
+                        ...state,
+                        discover_weekly: action.discover_weekly,
+                    }
         default:
             return state;
     }

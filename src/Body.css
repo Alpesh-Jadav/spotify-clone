@@ -19,14 +19,44 @@
 } 
 .body__infoText{
     flex: 1;
+
 }
+
 
 
 .body__infoText h2 {
     font-size: 48px;
     margin-bottom: 10px;
+    margin: 0;
 }
 
 .body__infoText p {
     font-size: 14px;
 } 
+
+.body__songs{
+    margin: 20px -30px;
+}
+.body__icons {
+    display: flex;
+    align-items: center;
+}
+.body__icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+.body__icon {
+    color: grey;
+}
+.body__icon:hover{
+    color: white;
+}
+.body__shuffel {
+    font-size: 70px !important;
+    color: #1db954 !important;
+    margin: 20px 0px 20px 50px;
+}
+
+.body__shuffel:hover {
+    transition: 0.1s transform ease-in;
+    transform: scale(1.08);
+}
