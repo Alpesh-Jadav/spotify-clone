@@ -13,6 +13,12 @@
     width: 90%;
     margin: 10px auto;
 }
+
+.sidebarOption > p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+}
 .sidebarOption:hover {
     color: white;
 }
