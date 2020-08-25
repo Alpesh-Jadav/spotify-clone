@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Body.css'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -9,6 +9,7 @@ import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 function Body({ spotify }) {
     const [{discover_weekly}, dispatch] = useDataLayerValue();
+    const [liked, setLiked ] = useState(false)
     return (
         <div className="body">
             <Header spotify={spotify}/>
@@ -25,7 +26,11 @@ function Body({ spotify }) {
             <div className="body__songs">
                 <div className="body__icons">
                     <PlayCircleFilledIcon className="body__shuffel"/>
-                    <FavoriteBorderIcon className="body__icon" fontSize="large"/>
+                    <div className="favorite" onClick={() => setLiked(!liked)}>
+                    { liked ? <FavoriteIcon className="body__icon green-icon" fontSize="large"/>
+                      : <FavoriteBorderIcon className="body__icon" fontSize="large"/>}
+                    
+                    </div>
                     <MoreHorizIcon  className="body__icon"/>
                 </div>
                 {discover_weekly?.tracks.items.map(item => (

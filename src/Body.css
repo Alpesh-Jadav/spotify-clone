@@ -25,6 +25,9 @@
     flex: 1;
 
 }
+.green-icon{
+    color: #1db954 !important;
+}
 
 
 
@@ -47,6 +50,9 @@
     align-items: center;
 }
 .body__icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+.favorite{
     margin-right: 20px;
 }
 .body__icon {
