@@ -4,7 +4,7 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    token: "BQBW2ImLc000GN_VcC7eq8FOr5idJeGAx7YdAASZ8l3Y6K9X7ShEH4tdSETZZ-bbfTUF4WbbDZydMFieTjJrvCVPXnsgrB4wLxLnqikV7XGzyLMmjKdz0NbVNrytaIJl6zgc7Nb7ozRyzfgNxGmkxRn5i5HvdoA"
+    token: "BQASGlkrI5Sbh2lqDU8TKpu3VUmp1ANXwKZKxRv8QHZ_lw2QoYhQWs4Wri1BV_5PezeacJN-vfusS5fSlxBXJ9pIAdsUqOyV8RddzlbM5Zw2si4GLcCUU9oObdkpJXgvQo1WnDD3w5b4WfzBjCRwio7x3PGSpBc"
     // IMP NOTICE: After production of this project , set the above token value to null. 
     // So every user first go through spotify user autehentication
 };
