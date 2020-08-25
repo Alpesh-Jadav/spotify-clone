@@ -6,9 +6,66 @@
     justify-content: space-between;
     bottom: 0;
     height: 65px;
-    width: 96%;
+    width: 97%;
     background-color: #282828;
     padding: 20px;
 }
 
-.footer 
+
+.footer__left {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 300px;
+}
+
+.footer__center {
+    flex: 0.4;
+    padding: 0 100px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+
+.play-btn:hover {
+    
+    color: white;
+    transition: transform 0.2s ease-in-out;
+    transform:scale(1.1) !important;
+
+}
+.footer__icon:hover {
+    color: white;
+}
+
+.footer__right {
+    flex: 0.3;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: grey;
+    
+}
+
+.footer__right * .MuiSlider-root {
+    color: gray;
+}
+.footer__right * .MuiSlider-root:hover{
+    color: green;
+}
+.footer__albumLogo{
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+.footer__songInfo h4{
+    margin-bottom: 5px;
+}
+.footer__songInfo p {
+    font-size: 12px;
+}
