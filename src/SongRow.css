@@ -7,9 +7,28 @@
     display: flex;
     align-items: center;
     z-index: 100;
-    color: blueviolet;
+    color: white;
 
 }
+.songRow:hover{
+
+    cursor: pointer;
+    background-color: black;
+    opacity: .8;
+}
 .songRow__album{
-    width: 100px;
+    width: 40px;
+    height: 40px;
+}
+.songRow__info{
+    margin-left: 20px;
+}
+.songRow__info h1 {
+    font-size: 16px;
+}
+.songRow__info p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+
 }
