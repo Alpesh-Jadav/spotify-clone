@@ -1,0 +1,15 @@
+
+
+
+.songRow {
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    color: blueviolet;
+
+}
+.songRow__album{
+    width: 100px;
+}
