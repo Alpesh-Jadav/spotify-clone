@@ -1,6 +1,6 @@
 
 export const initialState = {
-    user: null,
+    user: 'alps',
     playlists: [],
     playing: false,
     item: null,

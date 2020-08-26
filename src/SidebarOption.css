@@ -2,27 +2,41 @@
 .sidebarOption{
     display: flex;
     align-items: center;
-    color: grey;
+    color: white;
+    opacity: .7;
     height: 40px;
     cursor: pointer;
-    transition: 200ms color ease-in;
+    transition: 200ms opacity ease-in;
 }
 
-.sidebar > hr {
-    border: 1px solid #282828;
+.sidebar > .mid-line {
+    /* border: 1px solid #282828; */
     width: 90%;
-    margin: 10px auto;
+    background-color: rgb(54, 52, 52);
+    height: .1px;
+    margin: 20px auto;
 }
 
 .sidebarOption > p {
     margin-top: 10px;
     margin-left: 10px;
     font-size: 12px;
+    letter-spacing: .1px;
 }
 .sidebarOption:hover {
-    color: white;
+    opacity: 1;
 }
 
 .sidebarOption__icon {
     padding: 0 10px;
+}
+.sidebarOption__title{
+    font-weight: 500;
+}
+.plus-icon, .like-icon {
+    font-size: 35px !important;
+    margin-top: 10px;
+}
+.like-icon {
+    color: rgb(96, 83, 167) !important;
 }
