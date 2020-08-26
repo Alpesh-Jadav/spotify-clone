@@ -24,11 +24,13 @@ function Sidebar() {
          <SidebarOption className="plus-icon" title="Create Playlist" Icon={AddBoxIcon}/>
         <SidebarOption className="like-icon" title="Liked Songs" Icon={FavoriteIcon}/>
           <div className="mid-line" />
+          <div className="sidebar__songList">
          {
              playlists?.items?.map((playlist) => (
                 <SidebarOption title={playlist.name} />
              ))
          }
+         </div>
          
 
         </div>

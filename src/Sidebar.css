@@ -22,3 +22,7 @@
     font-weight: 700;
     letter-spacing: 1px;
 }
+.sidebar__songList{
+    height: 265px;
+    overflow: scroll;
+}
