@@ -1,11 +1,16 @@
 
 .body {
     flex: 0.8;
+    
     background: linear-gradient(rgb(91, 87,115), rgba(0, 0, 0, 1));
-    height: 100vh;
-    color: white;
-    padding: 30px;
     overflow-y: overlay;
+    height: 100vh;
+}
+.body__container {
+    height: 100%;
+    padding: 30px;
+    color: white;
+   
 }
 .body::-webkit-scrollbar {
     display: none;

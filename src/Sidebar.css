@@ -26,3 +26,6 @@
     height: 265px;
     overflow: scroll;
 }
+.sidebar__songList::-webkit-scrollbar {
+    display: none;
+  }

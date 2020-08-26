@@ -12,33 +12,35 @@ function Body({ spotify }) {
     const [liked, setLiked ] = useState(false)
     return (
         <div className="body">
-            <Header spotify={spotify}/>
+           <div className="body__container">
+           <Header spotify={spotify}/>
 
-            <div className="body__info">
-                <img src={discover_weekly?.images[0].url} alt="Discovery Weekly"/>
-                <div className="body__infoText">
-                    <strong>PLAYLIST</strong>
-                    <h2>My Songs</h2>
-                    <p>{discover_weekly?.description}</p>
+<div className="body__info">
+    <img src={discover_weekly?.images[0].url} alt="Discovery Weekly"/>
+    <div className="body__infoText">
+        <strong>PLAYLIST</strong>
+        <h2>My Songs</h2>
+        <p>{discover_weekly?.description}</p>
 
-                </div>
-            </div>
-            <div className="body__songs">
-                <div className="body__icons">
-                    <PlayCircleFilledIcon className="body__shuffel"/>
-                    <div className="favorite" onClick={() => setLiked(!liked)}>
-                    { liked ? <FavoriteIcon className="body__icon green-icon" fontSize="large"/>
-                      : <FavoriteBorderIcon className="body__icon" fontSize="large"/>}
-                    
-                    </div>
-                    <MoreHorizIcon  className="body__icon"/>
-                </div>
-                <div className="body_songList">
-                {discover_weekly?.tracks.items.map(item => (
-                    <SongRow track={item.track} />
-                ))}
-                </div>
-            </div>
+    </div>
+</div>
+<div className="body__songs">
+    <div className="body__icons">
+        <PlayCircleFilledIcon className="body__shuffel"/>
+        <div className="favorite" onClick={() => setLiked(!liked)}>
+        { liked ? <FavoriteIcon className="body__icon green-icon" fontSize="large"/>
+          : <FavoriteBorderIcon className="body__icon" fontSize="large"/>}
+        
+        </div>
+        <MoreHorizIcon  className="body__icon"/>
+    </div>
+    <div className="body_songList">
+    {discover_weekly?.tracks.items.map(item => (
+        <SongRow track={item.track} />
+    ))}
+    </div>
+</div>
+           </div>
         </div>
     )
 }
