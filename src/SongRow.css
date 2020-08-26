@@ -15,6 +15,7 @@
     cursor: pointer;
     background-color: black;
     opacity: .8;
+    color: #1db954;
 }
 .songRow__album{
     width: 40px;
@@ -29,6 +30,6 @@
 .songRow__info p {
     font-size: 14px;
     margin-top: 3px;
-    color: gray;
+    color: gray !important;
 
 }
