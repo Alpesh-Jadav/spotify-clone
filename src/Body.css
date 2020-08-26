@@ -31,9 +31,6 @@
     flex: 1;
 
 }
-.green-icon{
-    color: #1db954 !important;
-}
 
 
 
@@ -79,14 +76,13 @@
 .body__icons > .MuiSvgIcon-root {
     margin-right: 20px;
 }
-.favorite{
-    margin-right: 20px;
-}
 .body__icon {
-    color: grey;
+    font-size: 30px !important;
+    color: white;
+    opacity: .7;
 }
 .body__icon:hover{
-    color: white;
+    opacity: 1;
 }
 .body__shuffel {
     font-size: 70px !important;

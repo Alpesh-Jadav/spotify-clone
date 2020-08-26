@@ -1,5 +1,6 @@
 
 
+
 function msToTime(duration) {
 
     let  seconds = Math.floor((duration / 1000) % 60),
