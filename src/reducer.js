@@ -4,14 +4,14 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    discover_weekly: null,
+    playlists_items: null,
     token: null, 
     // IMP NOTICE: After production of this project , set the above user value to null. 
     // So every user first go through spotify user autehentication
 };
 
  const reducer = (state, action) => {
-    console.log(action)
+   
 
     switch(action.type) {
         case 'SET_USER': 
@@ -29,10 +29,10 @@ export const initialState = {
                     ...state,
                     playlists: action.playlists
                 }
-                case 'SET_DISCOVER_WEEKLY':
+                case 'SET_PLAYLIST_ITEMS':
                     return {
                         ...state,
-                        discover_weekly: action.discover_weekly,
+                        playlists_items: action.playlists_items,
                     }
         default:
             return state;

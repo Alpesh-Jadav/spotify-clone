@@ -22,14 +22,21 @@
     height: 40px;
 }
 .songRow__info{
+    width: 100%;
     margin-left: 20px;
 }
 .songRow__info h1 {
     font-size: 16px;
 }
 .songRow__info p {
+    width: 70%;
     font-size: 14px;
     margin-top: 3px;
     color: gray !important;
 
+}
+.songRow__details{
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
 }

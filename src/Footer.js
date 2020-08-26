@@ -12,7 +12,8 @@ import { Grid, Slider } from '@material-ui/core';
 function Footer() {
     return (
         <div className="footer">
-            <div className="footer__left">
+           <div className="footer__container">
+           <div className="footer__left">
             <img className="footer__albumLogo" src="https://upload.wikimedia.org/wikipedia/en/d/dc/Kabir_Singh.jpg" alt="poster"/>
                 <div className="footer__songInfo">
                     <h4>Kaise hua</h4>
@@ -43,6 +44,7 @@ function Footer() {
                 </Grid>
                 </Grid>
             </div>
+           </div>
         </div>
     )
 }

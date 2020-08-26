@@ -15,7 +15,7 @@ function App() {
     window.location.hash="";
 
     const _token = hash.access_token;
-    console.log('_token=>',_token)
+  
     if(_token) {
       
        dispatch({
@@ -40,8 +40,8 @@ function App() {
       })
       spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
         dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
+          type: "SET_PLAYLIST_ITEMS",
+          playlists_items: response,
         })
       })
     }

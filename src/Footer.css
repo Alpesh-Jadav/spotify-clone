@@ -2,15 +2,17 @@
 
 .footer {
     position: fixed;
-    display: none;
-    justify-content: space-between;
     bottom: 0;
     height: 52px;
-    width: 97%;
+    width: 100%;
     background-color: #282828;
     padding: 20px 10px;
 }
-
+.footer__container {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+}
   
 
 
