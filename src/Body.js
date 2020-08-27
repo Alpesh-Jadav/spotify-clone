@@ -26,7 +26,7 @@ function Body({ spotify }) {
                         <div className="body__infoText">
                             <strong>PLAYLIST</strong>
                             <h2>{playlists_items ? playlists_items.name : 'Songs'}</h2>
-                            <div className="duration"><p>{playlists_items?.owner?.display_name}</p><span><h1>.</h1></span><span className="total-hours">
+                        <div className="duration"><p>{playlists_items?.owner?.display_name}</p><h1>{'•'}</h1><span className="total-hours">
                                 2 hr 20 min
                         </span></div>
 

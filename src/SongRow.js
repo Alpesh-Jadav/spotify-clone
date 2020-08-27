@@ -12,7 +12,7 @@ function SongRow({track}) {
                </div>
                <p>
                    {track.artists.map((artist) => artist.name).join(", ")}
-                   {', '}{track.album.name}
+                   {' • '}{track.album.name}
                </p>
                
            </div>

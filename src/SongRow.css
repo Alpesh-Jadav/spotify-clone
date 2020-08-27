@@ -13,8 +13,7 @@
 .songRow:hover{
 
     cursor: pointer;
-    background-color: black;
-    opacity: .8;
+    background-color: rgba(128, 128, 128, 0.116);
     color: #1db954;
 }
 .songRow__album{
