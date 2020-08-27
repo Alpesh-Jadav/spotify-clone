@@ -1,18 +1,28 @@
 
 .body {
     flex: 0.8;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(rgb(91, 87,115), rgba(0, 0, 0, 1));
-
     height: 100vh;
+    
+    overflow-y: overlay;
 }
 .body__container {
     height: 80%;
     padding: 30px;
     color: white;
-    overflow-y: overlay;
+    /* margin-top: 60px; */
     
 }
-.body__container::-webkit-scrollbar {
+.body__grey{
+    background-color: rgb(39, 33, 41);
+}
+.body__dark{
+    padding: 0px 30px 70px 30px;
+    background-color: rgb(27, 27, 29);
+}
+.body::-webkit-scrollbar {
     display: none;
   }
 
@@ -84,15 +94,15 @@
 .body__icon:hover{
     opacity: 1;
 }
-.body__shuffel {
+.body__playIcon {
     font-size: 70px !important;
-    color: #1db954 !important;
+    color: #38c76a !important;
     margin: 20px 0px 20px 50px;
 }
 
-.body__shuffel:hover {
+.body__playIcon:hover {
     transition: 0.1s transform ease-in;
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 .empty-list{ 
     height: 18vw;

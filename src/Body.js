@@ -10,32 +10,37 @@ function Body({ spotify }) {
     const [{ playlists_items }, dispatch] = useDataLayerValue();
 
 
-    
+
     console.log('loking for playlist items =>', playlists_items)
     return (
         <div className="body">
-            <div className="body__container">
-                <Header spotify={spotify} />
+            <div className="body__grey">
+                <div className="body__container">
 
-                <div className="body__info">
-                {playlists_items?<img src={playlists_items?.images[0].url} alt="My Playlist" />:
-                    <img src="/assets/unknown.png" alt="My Playlist"/>
-                }
-                    <div className="body__infoText">
-                        <strong>PLAYLIST</strong>
-                        <h2>{playlists_items?playlists_items.name:'Songs'}</h2>
-                        <div className="duration"><p>{playlists_items?.owner?.display_name}</p><span><h1>.</h1></span><span className="total-hours">
-                            2 hr 20 min 
+                    <Header spotify={spotify} />
+
+                    <div className="body__info">
+                        {playlists_items ? <img src={playlists_items?.images[0].url} alt="My Playlist" /> :
+                            <img src="/assets/unknown.png" alt="My Playlist" />
+                        }
+                        <div className="body__infoText">
+                            <strong>PLAYLIST</strong>
+                            <h2>{playlists_items ? playlists_items.name : 'Songs'}</h2>
+                            <div className="duration"><p>{playlists_items?.owner?.display_name}</p><span><h1>.</h1></span><span className="total-hours">
+                                2 hr 20 min
                         </span></div>
 
+                        </div>
                     </div>
                 </div>
-                <div className="body__songs">
-                    <div className="body__icons">
-                        <PlayCircleFilledIcon className="body__shuffel" />
-                        <MoreHorizIcon className="body__icon" />
-                    </div>
-                    {playlists_items ? 
+            </div>
+            <div className="body__dark">
+            <div className="body__songs">
+                <div className="body__icons">
+                    <PlayCircleFilledIcon className="body__playIcon" />
+                    <MoreHorizIcon className="body__icon" />
+                </div>
+                {playlists_items ?
                     <div className="body_songList">
                         {playlists_items?.tracks.items.map(item => (
                             <SongRow track={item.track} />
@@ -49,8 +54,8 @@ function Body({ spotify }) {
                             <button>NEW RELEASES</button>
                         </section>
                     </div>
-                    }
-                </div>
+                }
+            </div>
             </div>
         </div>
     )

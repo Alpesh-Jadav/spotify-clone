@@ -8,7 +8,7 @@ function Header() {
     
     return (
         <div className="header">
-            <div className="header__left">
+          <div className="header__left">
                 <SearchIcon />
                 <input placeholder="Serch for Artists, Songs, Albums" type="text"/>
             </div>
@@ -16,7 +16,7 @@ function Header() {
             <Avatar src="{user?.images[0]?.url}" alt="AJ" />
                 <h4>{user?.display_name}</h4>
             </div>
-        </div>
+          </div>
     )
 }
 
