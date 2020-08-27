@@ -7,11 +7,12 @@ import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 function Body({ spotify }) {
-    const [{ playlists_items }, dispatch] = useDataLayerValue();
+    const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
 
 
 
     console.log('loking for playlist items =>', playlists_items)
+    console.log('loking for reccomend songs =>', reccomend_songs)
     return (
         <div className="body">
             <div className="body__grey">
@@ -20,7 +21,7 @@ function Body({ spotify }) {
                     <Header spotify={spotify} />
 
                     <div className="body__info">
-                        {playlists_items ? <img src={playlists_items?.images[0].url} alt="My Playlist" /> :
+                        {playlists_items ? <img src={playlists_items.images.length > 0 ? playlists_items.images[0].url : "/assets/unknown.png"} alt="My Playlist" /> :
                             <img src="/assets/unknown.png" alt="My Playlist" />
                         }
                         <div className="body__infoText">
@@ -40,19 +41,25 @@ function Body({ spotify }) {
                     <PlayCircleFilledIcon className="body__playIcon" />
                     <MoreHorizIcon className="body__icon" />
                 </div>
-                {playlists_items ?
-                    <div className="body_songList">
+                {playlists_items?.tracks.length > 0 ?
+                    <div className="body__songList">
                         {playlists_items?.tracks.items.map(item => (
                             <SongRow track={item.track} />
                         ))}
                     </div> :
                     <div className="empty-list">
+                            <div className="section-container">
                         <section>
                             <AlbumOutlinedIcon className="disc-icon" />
                             <h2>It's a bit empty here...</h2>
                             <h5>Let's find some songs for your playlist</h5>
                             <button>NEW RELEASES</button>
-                        </section>
+                        </section></div>
+                        <div className="body__emptySongList">
+                        {reccomend_songs?.tracks.items.map(item => (
+                            <SongRow track={item.track} />
+                        ))}
+                    </div>
                     </div>
                 }
             </div>

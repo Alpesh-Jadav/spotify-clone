@@ -38,10 +38,16 @@ function App() {
           playlists: playlists,
         })
       })
-      spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
+      spotify.getPlaylist('4TPxDnAX8Ec6Gxl1tSeFEP').then(response => {
         dispatch({
           type: "SET_PLAYLIST_ITEMS",
           playlists_items: response,
+        })
+      })
+      spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
+        dispatch({
+          type: "SET_RECCOMEND_SONGS",
+          reccomend_songs: response,
         })
       })
     }

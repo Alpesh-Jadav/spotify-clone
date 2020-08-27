@@ -2,6 +2,7 @@
 export const initialState = {
     user: null,
     playlists: [],
+    reccomend_songs: null,
     playing: false,
     item: null,
     playlists_items: null,
@@ -34,6 +35,11 @@ export const initialState = {
                         ...state,
                         playlists_items: action.playlists_items,
                     }
+            case 'SET_RECCOMEND_SONGS':
+                return {
+                    ...state,
+                    reccomend_songs: action.reccomend_songs,
+                }
         default:
             return state;
     }
