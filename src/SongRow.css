@@ -16,6 +16,22 @@
     background-color: rgba(128, 128, 128, 0.116);
     color: #1db954;
 }
+.songRow__addBtn{
+    border-radius: 20px;
+    width: 90px;
+    padding: 8px 10px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgb(90, 84, 84);
+}
+.songRow__addBtn:hover {
+    transform: scale(1.08);
+    transition: 200ms;
+}
+
 .songRow__album{
     width: 40px;
     height: 40px;

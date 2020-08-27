@@ -6,7 +6,7 @@
     /* background: linear-gradient(rgb(91, 87,115), rgba(0, 0, 0, 1)); */
     height: 100vh;
     
-    /* background-color: rgb(27, 27, 29); */
+    background-color: rgb(27, 27, 29);
     overflow-y: overlay;
 }
 .body__container {
@@ -17,7 +17,7 @@
     
 }
 .body__grey{
-    background-color:rgba(13, 13, 14, 0.897);
+    background-color:rgb(46, 46, 48);
 }
 .body__dark{
     padding: 0px 30px 70px 30px;
@@ -105,6 +105,13 @@
     transition: 0.1s transform ease-in;
     transform: scale(1.05);
 }
+
+.recommend-title {
+    padding-left: 40px;
+    margin-top: 90px;
+    color: white;
+}
+
 .empty-list{ 
     height: 18vw;
     display: flex;
@@ -114,6 +121,7 @@
 }
 .body__emptySongList{
     padding-bottom: 120px;
+    /* margin-top: 40px; */
 }
 .section-container{
     display: grid;
@@ -158,7 +166,4 @@
 .empty-list section button:hover{
     transition: 100ms ease-in;
     transform: scale(1.09);
-}
-.body__emptySongList{
-    margin-top: 140px;
 }

@@ -27,7 +27,7 @@ function Body({ spotify }) {
                         <div className="body__infoText">
                             <strong>PLAYLIST</strong>
                             <h2>{playlists_items ? playlists_items.name : 'Songs'}</h2>
-                        <div className="duration"><p>{playlists_items?.owner?.display_name}</p><h1>{'•'}</h1><span className="total-hours">
+                            <div className="duration"><p>{playlists_items?.owner?.display_name}</p><h1>{'•'}</h1><span className="total-hours">
                                 2 hr 20 min
                         </span></div>
 
@@ -36,33 +36,36 @@ function Body({ spotify }) {
                 </div>
             </div>
             <div className="body__dark">
-            <div className="body__songs">
-                <div className="body__icons">
-                    <PlayCircleFilledIcon className="body__playIcon" />
-                    <MoreHorizIcon className="body__icon" />
-                </div>
-                {playlists_items?.tracks.length > 0 ?
-                    <div className="body__songList">
-                        {playlists_items?.tracks.items.map(item => (
-                            <SongRow track={item.track} />
-                        ))}
-                    </div> :
-                    <div className="empty-list">
+                <div className="body__songs">
+                    <div className="body__icons">
+                        <PlayCircleFilledIcon className="body__playIcon" />
+                        <MoreHorizIcon className="body__icon" />
+                    </div>
+                   
+                    {playlists_items?.tracks.length > 0 ?
+                        <div className="body__songList">
+                            {playlists_items?.tracks.items.map(item => (
+                                <SongRow track={item.track} />
+                            ))}
+                        </div> :
+                        <div className="empty-list">
                             <div className="section-container">
-                        <section>
-                            <AlbumOutlinedIcon className="disc-icon" />
-                            <h2>It's a bit empty here...</h2>
-                            <h5>Let's find some songs for your playlist</h5>
-                            <button>NEW RELEASES</button>
-                        </section></div>
-                        <div className="body__emptySongList">
-                        {reccomend_songs?.tracks.items.map(item => (
-                            <SongRow track={item.track} />
-                        ))}
-                    </div>
-                    </div>
-                }
-            </div>
+                                <section>
+                                    <AlbumOutlinedIcon className="disc-icon" />
+                                    <h2>It's a bit empty here...</h2>
+                                    <h5>Let's find some songs for your playlist</h5>
+                                    <button>NEW RELEASES</button>
+                                </section></div>
+                                  
+                            <h2 className="recommend-title">Recommended Songs</h2>
+                            <div className="body__emptySongList">
+                                {reccomend_songs?.tracks.items.map(item => (
+                                    <SongRow add track={item.track} />
+                                ))}
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     )
