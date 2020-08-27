@@ -3,8 +3,6 @@ export const initialState = {
     user: null,
     playlists: [],
     reccomend_songs: null,
-    playing: false,
-    item: null,
     playlists_items: null,
     token: null, 
     // IMP NOTICE: After production of this project , set the above user value to null. 

@@ -10,9 +10,6 @@ function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
 
 
-
-    console.log('loking for playlist items =>', playlists_items)
-    console.log('loking for reccomend songs =>', reccomend_songs)
     return (
         <div className="body">
             <div className="body__grey">
