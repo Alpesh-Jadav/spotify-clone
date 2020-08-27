@@ -42,13 +42,20 @@ function Body({ spotify }) {
                         <MoreHorizIcon className="body__icon" />
                     </div>
                    
-                    {playlists_items?.tracks.length > 0 ?
-                        <div className="body__songList">
+                    {playlists_items?.tracks.items.length > 0 ?
+                        (<><div className="body__songList">
                             {playlists_items?.tracks.items.map(item => (
                                 <SongRow track={item.track} />
                             ))}
-                        </div> :
-                        <div className="empty-list">
+                        </div>
+                        <h2 className="recommend-title">Recommended Songs</h2>
+                            <div className="body__emptySongList">
+                                {reccomend_songs?.tracks.items.map(item => (
+                                    <SongRow add={true} track={item.track} />
+                                ))}
+                            </div></>
+                         ):
+                       ( <div className="empty-list">
                             <div className="section-container">
                                 <section>
                                     <AlbumOutlinedIcon className="disc-icon" />
@@ -60,10 +67,10 @@ function Body({ spotify }) {
                             <h2 className="recommend-title">Recommended Songs</h2>
                             <div className="body__emptySongList">
                                 {reccomend_songs?.tracks.items.map(item => (
-                                    <SongRow add track={item.track} />
+                                    <SongRow add={true} track={item.track} />
                                 ))}
                             </div>
-                        </div>
+                        </div>)
                     }
                 </div>
             </div>

@@ -3,14 +3,13 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';import SearchIcon
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-
 import './Sidebar.css'
 import SidebarOption from './SidebarOption'
 import { useDataLayerValue } from './DataLayer';
 function Sidebar() {
 
     const [{ playlists }, dispatch] = useDataLayerValue();
-    console.log("required playlists => ", playlists)
+    console.log("required playlists awsome => ", playlists)
     return (
         <div className="sidebar">
         <img className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify"/>

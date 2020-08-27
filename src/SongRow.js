@@ -19,7 +19,7 @@ function SongRow({track, add}) {
                </p>
                
            </div>
-           {add && <button className="songRow__addBtn">ADD</button>}
+           {add == true && <button className="songRow__addBtn">ADD</button>}
         </div>
        
     )
