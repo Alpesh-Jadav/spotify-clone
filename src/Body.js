@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import './Body.css'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 function Body({ spotify }) {
     const [{ playlists_items }, dispatch] = useDataLayerValue();
-    // let [totalHours, setTotalHours] = useState(0)
 
 
     
@@ -18,10 +18,12 @@ function Body({ spotify }) {
                 <Header spotify={spotify} />
 
                 <div className="body__info">
-                    <img src={playlists_items?.images[0].url} alt="Discovery Weekly" />
+                {playlists_items?<img src={playlists_items?.images[0].url} alt="My Playlist" />:
+                    <img src="/assets/unknown.png" alt="My Playlist"/>
+                }
                     <div className="body__infoText">
                         <strong>PLAYLIST</strong>
-                        <h2>{playlists_items?.name}</h2>
+                        <h2>{playlists_items?playlists_items.name:'Songs'}</h2>
                         <div className="duration"><p>{playlists_items?.owner?.display_name}</p><span><h1>.</h1></span><span className="total-hours">
                             2 hr 20 min 
                         </span></div>
@@ -33,11 +35,21 @@ function Body({ spotify }) {
                         <PlayCircleFilledIcon className="body__shuffel" />
                         <MoreHorizIcon className="body__icon" />
                     </div>
+                    {playlists_items ? 
                     <div className="body_songList">
                         {playlists_items?.tracks.items.map(item => (
                             <SongRow track={item.track} />
                         ))}
+                    </div> :
+                    <div className="empty-list">
+                        <section>
+                            <AlbumOutlinedIcon className="disc-icon" />
+                            <h2>It's a bit empty here...</h2>
+                            <h5>Let's find some songs for your playlist</h5>
+                            <button>NEW RELEASES</button>
+                        </section>
                     </div>
+                    }
                 </div>
             </div>
         </div>

@@ -94,3 +94,46 @@
     transition: 0.1s transform ease-in;
     transform: scale(1.08);
 }
+.empty-list{ 
+    height: 18vw;
+    display: grid;
+    place-items: center;
+}
+.empty-list section{
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vw;
+    width: 30vw;
+    min-width: 250px !important;
+}
+.empty-list section .disc-icon{
+    font-size: 5vw !important;
+}
+.empty-list section h2{
+    font-size: 2.1vw;
+    margin-top: 12px;
+    word-spacing: -2px;
+}
+.empty-list section h5 {
+    font-size: 1.6vw;
+    margin-top: 3px;
+    font-weight: 400;
+}
+.empty-list section button{
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: none;
+    min-width: 180px;
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.empty-list section button:hover{
+    transition: 100ms ease-in;
+    transform: scale(1.09);
+}
