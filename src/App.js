@@ -5,6 +5,7 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import Player from './Player';
 import { useDataLayerValue } from './DataLayer';
+import { totalDuration } from './util';
 
 const spotify = new SpotifyWebApi();
 function App() {
@@ -33,13 +34,15 @@ function App() {
         })
       })
 
+     
+
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: playlists,
         })
       })
-      spotify.getPlaylist('6QkANeOAU6vBMYP8LAmMC6').then(response => {
+      spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
         dispatch({
           type: "SET_PLAYLIST_ITEMS",
           playlists_items: response,
@@ -51,6 +54,7 @@ function App() {
           reccomend_songs: response,
         })
       })
+
     }
     
    

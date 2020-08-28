@@ -9,9 +9,9 @@ function SidebarOption({ title, Icon, className}) {
     const [{playlists}, dispatch] = useDataLayerValue();
     
   
-    const changePlaylist = (list) => {
+    const changePlaylist = (list, item) => {
 
-
+        
         spotify.getPlaylist(list.id).then(response => {
             dispatch({
               type: "SET_PLAYLIST_ITEMS",
@@ -24,7 +24,7 @@ function SidebarOption({ title, Icon, className}) {
         <div className="sidebarOption">
            {Icon && <Icon className={`${className} sidebarOption__icon`} />}
 
-            <p  onClick={() => changePlaylist( playlists?.items?.find(item => item.name === title))} className="sidebarOption__title">{title}</p>
+            <p onClick={() => changePlaylist(playlists?.items?.find(item => item.name === title))} className="sidebarOption__title">{title}</p>
         </div>
     )
 }

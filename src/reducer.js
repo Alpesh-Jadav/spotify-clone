@@ -4,6 +4,7 @@ export const initialState = {
     playlists: [],
     reccomend_songs: null,
     playlists_items: null,
+    playlists_duration: 0,
     token: null, 
     // IMP NOTICE: After production of this project , set the above user value to null. 
     // So every user first go through spotify user autehentication
@@ -38,6 +39,11 @@ export const initialState = {
                     ...state,
                     reccomend_songs: action.reccomend_songs,
                 }
+                case 'SET_PLAYLISTS_ITEMS_DURATION':
+                    return {
+                        ...state,
+                        playlists_duration: action.playlists_duration,
+                    }
         default:
             return state;
     }
