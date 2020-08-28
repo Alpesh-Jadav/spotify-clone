@@ -1,4 +1,17 @@
+import React from 'react'
+import { useDataLayerValue } from "./DataLayer";
 
+// const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
+let total = 0 ;
+function totalDuration(playlist, setDuration) {
+  // console.log('function playlist', playlist)
+  //   playlist.tracks.items.map(item => (
+  //     total = total + item.track.duration_ms
+  //   ))
+  //     setDuration(total)
+  //   console.log('total = ', total);
+  //   console.log('playlist = ', playlist);
+}
 
 
 function msToTime(duration) {
@@ -15,3 +28,4 @@ function msToTime(duration) {
   }
 
   export default msToTime
+  export {totalDuration}

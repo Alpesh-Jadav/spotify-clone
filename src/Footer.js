@@ -9,7 +9,8 @@ import SpeakerIcon from '@material-ui/icons/Speaker';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import { Grid, Slider } from '@material-ui/core';
-import { useDataLayerValue } from './DataLayer';
+
+
 function Footer() {
 
    

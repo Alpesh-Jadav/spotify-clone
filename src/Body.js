@@ -6,10 +6,11 @@ import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
+import { totalDuration } from './util';
 function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
-
-
+    const [duration, setDuration] = useState(0)
+    console.log('playlist', playlists_items) 
     return (
         <div className="body">
             <div className="body__grey">
@@ -26,6 +27,14 @@ function Body({ spotify }) {
                             <h2>{playlists_items ? playlists_items.name : 'Songs'}</h2>
                             <div className="duration"><p>{playlists_items?.owner?.display_name}</p><h1>{'•'}</h1><span className="total-hours">
                                 2 hr 20 min
+                                
+                                {/* {
+
+                                    playlists_items && totalDuration(playlists_items, setDuration)
+
+                                    
+                                } */}
+
                         </span></div>
 
                         </div>

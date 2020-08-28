@@ -8,7 +8,7 @@ import { useDataLayerValue } from './DataLayer';
 
 const spotify = new SpotifyWebApi();
 function App() {
-  const [{user, playlists}, dispatch] = useDataLayerValue();
+  const [{user}, dispatch] = useDataLayerValue();
 
   useEffect(() => {
 
@@ -39,7 +39,7 @@ function App() {
           playlists: playlists,
         })
       })
-      spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
+      spotify.getPlaylist('6QkANeOAU6vBMYP8LAmMC6').then(response => {
         dispatch({
           type: "SET_PLAYLIST_ITEMS",
           playlists_items: response,
@@ -55,7 +55,6 @@ function App() {
     
    
     }, []) 
-    // console.log(Object.keys(playlists?.items))
   return (
     <div className="app">
       {
