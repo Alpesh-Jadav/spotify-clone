@@ -9,16 +9,7 @@ import { useDataLayerValue } from './DataLayer';
 function Sidebar() {
 
     const [{ playlists }, dispatch] = useDataLayerValue();
-    const changePlaylist = () => {
-
-        console.log('you clicked on ')
-    // spotify.getPlaylist('4TPxDnAX8Ec6Gxl1tSeFEP').then(response => {
-    //     dispatch({
-    //       type: "SET_PLAYLIST_ITEMS",
-    //       playlists_items: response,
-    //     })
-    //   })
-}
+  
     return (
         <div className="sidebar">
         <img className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify"/>
@@ -35,7 +26,7 @@ function Sidebar() {
           <div className="sidebar__songList">
          {
              playlists?.items?.map((playlist) => (
-                <SidebarOption  title={playlist.name} />
+                <SidebarOption title={playlist.name} />
              ))
          }
          </div>
