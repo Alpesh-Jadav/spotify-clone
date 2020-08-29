@@ -1,62 +1,55 @@
-
-
-
 .songRow {
-    margin-left: 20px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    color: white;
-
+	margin-left: 20px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	z-index: 100;
+	color: white;
 }
-.songRow:hover{
-
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.116);
-    color: #1db954;
+.songRow:hover {
+	cursor: pointer;
+	background-color: rgba(128, 128, 128, 0.116);
+	color: #1db954;
 }
-.songRow__addBtn{
-    border-radius: 20px;
-    width: 90px;
-    padding: 8px 10px;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 700;
-    border: 1px solid rgb(90, 84, 84);
-    outline: none;
+.songRow__addBtn {
+	border-radius: 20px;
+	width: 90px;
+	padding: 8px 10px;
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 700;
+	border: 1px solid rgb(90, 84, 84);
+	outline: none;
 }
 .songRow__addBtn:hover {
-    transform: scale(1.08);
-    transition: 200ms;
+	transform: scale(1.08);
+	transition: 200ms;
 }
 
-.songRow__album{
-    width: 40px;
-    height: 40px;
+.songRow__album {
+	width: 40px;
+	height: 40px;
 }
-.songRow__info{
-    width: 100%;
-    margin-left: 20px;
+.songRow__info {
+	width: 100%;
+	margin-left: 20px;
 }
 .songRow__info h1 {
-    font-size: 16px;
+	font-size: 16px;
 }
 .songRow__info p {
-    width: 70%;
-    font-size: 14px;
-    margin-top: 3px;
-    color: gray !important;
-
+	width: 70%;
+	font-size: 14px;
+	margin-top: 3px;
+	color: gray !important;
 }
-.songRow__details{
-    display: flex;
-    padding-right: 10px;
-    justify-content: space-between;
+.songRow__details {
+	display: flex;
+	padding-right: 10px;
+	justify-content: space-between;
 }
-.songRow__details h5{
-
-    opacity: .7;
+.songRow__details h5 {
+	opacity: .7;
 }

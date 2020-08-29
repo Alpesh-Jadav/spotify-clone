@@ -1,20 +1,23 @@
-
-.login{
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
+.login {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background-color: black;
 }
 
 .login > img {
-    width: 100%;
+	width: 80%;
 }
 
 .login > a {
-    text-decoration: none;
-    background-color: #1db954;
-    padding: 20px;
-    border-radius: 99px;
-    font-weight: 800;
-    color: white ;
+	text-decoration: none;
+	background-color: #1db954;
+	padding: 20px;
+	border-radius: 99px;
+	font-weight: 800;
+	color: white;
+}
+.login > a:hover {
+	transition: 100ms ease-in-out;
+	background-color: #0f943d;
 }

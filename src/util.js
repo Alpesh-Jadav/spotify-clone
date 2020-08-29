@@ -7,9 +7,8 @@ function totalDuration(playlist) {
     playlist.tracks.items.map(item => {
       total = total + item.track.duration_ms
       counter++;
-      console.log('counter = ',counter)
     })
-    if(playlist.tracks.items.length == counter){
+    if(playlist.tracks.items.length === counter){
      
      counter = 0;
      result = total;
@@ -27,13 +26,8 @@ function totalDuration(playlist) {
 function msToTime(duration) {
 
     let  seconds = Math.floor((duration / 1000) % 60),
-      minutes = Math.floor((duration / (1000 * 60)) % 60),
-      hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+      minutes = Math.floor((duration / (1000 * 60)) % 60);
   
-    hours = hours;
-    minutes = minutes;
-    seconds = seconds;
-    
     if(seconds < 10) {
       return minutes + " : 0" + seconds;
     } else {
@@ -47,9 +41,6 @@ function msToTime(duration) {
       minutes = Math.floor((duration / (1000 * 60)) % 60),
       hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
   
-    hours = hours;
-    minutes = minutes;
-    seconds = seconds;
     if(duration < 3600000){
       return minutes + " min " + seconds + " sec "
     }  else {
