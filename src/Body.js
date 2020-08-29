@@ -134,13 +134,13 @@ function Body({ spotify }) {
             </> : <div className="body__container">
                <Header spotify={spotify} />
 
-               <h1>Your Playlists</h1>
+              {playlists ? <h1>Your Playlists</h1> : <h1><span className="empty-playlist">Your playlist is Empty! <p>(Create your playlist on original spotify and return back this page)</p><br /></span>Reccomend For You</h1>}
                 <div className="playlists">
 
-                {
-                    playlists?.items?.map(item => (
+                { 
+                  playlists ?  playlists?.items?.map(item => (
                         <Playlist coverPhoto={item.images.length > 0 ? item.images[0].url : '/assets/unknown.png'} owner={item.owner.display_name} name={item.name} item={item} />
-                    ))
+                    )) : reccomend_songs && <Playlist coverPhoto={reccomend_songs.images.length > 0 ? reccomend_songs.images[0].url : '/assets/unknown.png'} owner={reccomend_songs.owner.display_name} name={reccomend_songs.name} item={reccomend_songs} />
                 }
                     
                    

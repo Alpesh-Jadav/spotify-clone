@@ -25,8 +25,13 @@ function msToTime(duration) {
     hours = hours;
     minutes = minutes;
     seconds = seconds;
-  
-    return minutes + ":" + seconds;
+    
+    if(seconds < 10) {
+      return minutes + " : 0" + seconds;
+    } else {
+      return minutes + " : " + seconds;
+    }
+   
   }
   function msToTotalTime(duration) {
 

@@ -174,3 +174,12 @@
     flex-wrap: wrap;
     padding-bottom: 140px;
 }
+.empty-playlist{
+    font-size: 18px;
+    opacity: .99;
+}
+.empty-playlist p {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .7;
+}
