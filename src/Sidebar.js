@@ -8,11 +8,20 @@ import SidebarOption from './SidebarOption'
 import { useDataLayerValue } from './DataLayer';
 function Sidebar() {
 
-    const [{ playlists }, dispatch] = useDataLayerValue();
+    const [{ playlists, playlists_items }, dispatch] = useDataLayerValue();
+
+    const changePlaylist = () => {
+
+            dispatch({
+              type: "SET_PLAYLIST_ITEMS",
+              playlists_items: null,
+            })
+          
+}
     return (
         playlists?
         <div className="sidebar">
-            <img className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify" />
+            <img onClick={() => changePlaylist()} className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify" />
 
             <SidebarOption title="Home" Icon={HomeOutlinedIcon} />
             <SidebarOption title="Search" Icon={SearchIcon} />
