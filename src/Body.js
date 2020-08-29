@@ -6,7 +6,7 @@ import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
-import { totalDuration } from './util';
+import { totalDuration, msToTotalTime } from './util';
 function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
@@ -14,6 +14,7 @@ function Body({ spotify }) {
 
     useEffect(() => {
         if(playlists_items) {
+           
 
             console.log('playlists items ======== > ', playlists_items)
 
@@ -23,9 +24,9 @@ function Body({ spotify }) {
 
             const total = totalDuration(playlist);
 
-            setDuration(total);
+            setDuration(total)
 
-            console.log('duration => ', duration)
+            console.log('time =====> ', playlists_items.time)
 
            }       
            
@@ -36,17 +37,6 @@ function Body({ spotify }) {
 
     }, [playlist, playlists_items]);
 
-    const changePlaylist = () => {
-
-        console.log('change clicked');
-
-        spotify.getPlaylist('4TPxDnAX8Ec6Gxl1tSeFEP').then(response => {
-            dispatch({
-              type: "SET_PLAYLIST_ITEMS",
-              playlists_items: response,
-            })
-          })
-    }
  
    
 
@@ -65,11 +55,13 @@ function Body({ spotify }) {
                         <div className="body__infoText">
                             <strong>PLAYLIST</strong>
                             <h2>{playlists_items ? playlists_items.name : 'Songs'}</h2>
-                            <div className="duration"><p>{playlists_items?.owner?.display_name}</p><h1>{'•'}</h1><span className="total-hours">
-                                {/* 2 hr 20 min */}
-                                {duration}
-
-                        </span></div>
+                            <div className="duration"><p>{playlists_items?.owner?.display_name}</p>
+                            
+                            {
+                                duration !== 0 ? (<><h1>{'•'}</h1><span className="total-hours">{msToTotalTime(duration)}</span></>) : <div></div>
+                            }
+                            
+                            </div>
 
                         </div>
                     </div>
@@ -77,7 +69,7 @@ function Body({ spotify }) {
             </div>
             <div className="body__dark">
                 <div className="body__songs">
-                    <div onClick={() => changePlaylist()} className="body__icons">
+                    <div className="body__icons">
                         <PlayCircleFilledIcon className="body__playIcon" />
                         <MoreHorizIcon className="body__icon" />
                     </div>
