@@ -5,11 +5,10 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import Player from './Player';
 import { useDataLayerValue } from './DataLayer';
-import { totalDuration } from './util';
 
 const spotify = new SpotifyWebApi();
 function App() {
-  const [{user}, dispatch] = useDataLayerValue();
+  const [{user, playlists}, dispatch] = useDataLayerValue();
 
   useEffect(() => {
 
@@ -42,12 +41,9 @@ function App() {
           playlists: playlists,
         })
       })
-      spotify.getPlaylist('178n8yStfk0HSYs8eEsyTc').then(response => {
-        dispatch({
-          type: "SET_PLAYLIST_ITEMS",
-          playlists_items: response,
-        })
-      })
+
+     
+      
       spotify.getPlaylist('4TPxDnAX8Ec6Gxl1tSeFEP').then(response => {
         dispatch({
           type: "SET_RECCOMEND_SONGS",

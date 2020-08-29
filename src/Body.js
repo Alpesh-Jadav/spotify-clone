@@ -7,16 +7,39 @@ import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 import { totalDuration, msToTotalTime } from './util';
+
 function Body({ spotify }) {
-    const [{ playlists_items, reccomend_songs }, dispatch] = useDataLayerValue();
+    const [{ playlists_items, reccomend_songs, playlists }, dispatch] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
     const [playlist, setPlaylist] = useState(null)
 
+
     useEffect(() => {
+        
+        if (playlists.length > 0) {
+            let song_id = playlists?.items[0]?.id
+    
+            spotify.getPlaylist(song_id).then(response => {
+              dispatch({
+                type: "SET_PLAYLIST_ITEMS",
+                playlists_items: response,
+              })
+            })
+            
+            console.log('id => ',song_id)
+           }
+
+    }, [])
+    
+    useEffect(() => {
+
+      
+
         if(playlists_items) {
            
+            console.log('playlists ======== > ', playlists)
 
-            console.log('playlists items ======== > ', playlists_items)
+            console.log('upgraded', playlists?.items[0]?.id)
 
            setPlaylist(playlists_items);
 
@@ -41,7 +64,6 @@ function Body({ spotify }) {
    
 
     return (
-        playlists_items !== null ?
         <div className="body">
             <div className="body__grey">
                 <div className="body__container">
@@ -107,9 +129,7 @@ function Body({ spotify }) {
                 </div>
             </div>
         </div>
-    : <div className="body">
-        <h1>Loading...</h1>
-    </div>
+    
    )
 }
 
