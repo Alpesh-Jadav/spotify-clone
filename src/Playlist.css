@@ -1,0 +1,29 @@
+
+.playlist{
+    border: none;
+    width: 230px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(43, 42, 42, 0.842);
+    margin-top: 30px;
+    display: flex;
+    margin-right: 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
+}
+.playlist__content{
+    padding: 25px;
+    color: white;
+}
+.cover{
+    height: 180px;
+    width: 180px;
+}
+.playlist__content h3{
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+.playlist__content span {
+    font-size: 12px;
+    opacity: .7;
+}

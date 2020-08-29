@@ -168,3 +168,9 @@
     transition: 100ms ease-in;
     transform: scale(1.09);
 }
+
+.playlists{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 140px;
+}

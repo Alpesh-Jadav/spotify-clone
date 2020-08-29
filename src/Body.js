@@ -7,16 +7,20 @@ import Header from './Header'
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 import { totalDuration, msToTotalTime } from './util';
+import Playlist from './Playlist';
 
 function Body({ spotify }) {
-    const [{ playlists_items, reccomend_songs, playlists }, dispatch] = useDataLayerValue();
+    const [{ playlists_items, reccomend_songs, playlists, user }, dispatch] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
-    const [playlist, setPlaylist] = useState(null)
 
+    console.log('playlists ========> ', playlists)
 
     useEffect(() => {
         
+       
+        
         if (playlists.length > 0) {
+
             let song_id = playlists?.items[0]?.id
     
             spotify.getPlaylist(song_id).then(response => {
@@ -37,15 +41,14 @@ function Body({ spotify }) {
 
         if(playlists_items) {
            
-            console.log('playlists ======== > ', playlists)
+            console.log('playlists ========> ', playlists)
 
             console.log('upgraded', playlists?.items[0]?.id)
 
-           setPlaylist(playlists_items);
 
-           if(playlist){
+           if(playlists_items){
 
-            const total = totalDuration(playlist);
+            const total = totalDuration(playlists_items);
 
             setDuration(total)
 
@@ -58,14 +61,14 @@ function Body({ spotify }) {
         }
        
 
-    }, [playlist, playlists_items]);
+    }, [playlists_items]);
 
  
    
 
     return (
         <div className="body">
-            <div className="body__grey">
+           {playlists_items ? <><div className="body__grey">
                 <div className="body__container">
 
                     <Header spotify={spotify} />
@@ -128,6 +131,21 @@ function Body({ spotify }) {
                     }
                 </div>
             </div>
+            </> : <div className="body__container">
+               <Header spotify={spotify} />
+
+               <h1>Your Playlists</h1>
+                <div className="playlists">
+
+                {
+                    playlists?.items?.map(item => (
+                        <Playlist coverPhoto={item.images.length > 0 ? item.images[0].url : '/assets/unknown.png'} owner={item.owner.display_name} name={item.name} item={item} />
+                    ))
+                }
+                    
+                   
+                </div>
+            </div>}
         </div>
     
    )

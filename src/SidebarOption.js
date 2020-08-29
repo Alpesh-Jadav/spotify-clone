@@ -8,6 +8,7 @@ function SidebarOption({ title, Icon, className}) {
     const spotify = new SpotifyWebApi();
     const [{playlists}, dispatch] = useDataLayerValue();
     
+    // console.log(playlists)
   
     const changePlaylist = (list, item) => {
 
