@@ -1,17 +1,25 @@
 
-let total = 0 ;
+let total = 0;
 let counter = 0;
+let result = null;
 function totalDuration(playlist) {
   
     playlist.tracks.items.map(item => {
       total = total + item.track.duration_ms
       counter++;
+      console.log('counter = ',counter)
     })
     if(playlist.tracks.items.length == counter){
-      return total
+     
+     counter = 0;
+     result = total;
+     total = 0;
+     
+     return result
+     
     }
+    counter = 0;
     total = 0;
-    counter= 0;
      
 }
 

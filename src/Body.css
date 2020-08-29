@@ -47,8 +47,7 @@
 
 
 .body__infoText h2 {
-    /* font-size: 48px; */
-    font-size: 6vw;
+    font-size: 4vw;
     margin-bottom: 10px;
     margin: 0;
 }
@@ -163,6 +162,7 @@
     color: black;
     letter-spacing: 1px;
     cursor: pointer;
+    outline: none;
 }
 .empty-list section button:hover{
     transition: 100ms ease-in;

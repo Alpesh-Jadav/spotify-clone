@@ -26,6 +26,7 @@
     font-size: 12px;
     font-weight: 700;
     border: 1px solid rgb(90, 84, 84);
+    outline: none;
 }
 .songRow__addBtn:hover {
     transform: scale(1.08);

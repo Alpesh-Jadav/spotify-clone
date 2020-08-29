@@ -6,15 +6,17 @@ function Playlist( {coverPhoto, name, owner, item}) {
 
     const spotify = new SpotifyWebApi();
     
-    const [{}, dispatch] = useDataLayerValue();
+    const [{playlists_items}, dispatch] = useDataLayerValue();
+
     const changePlaylist = () => {
         console.log('clicked')
-        spotify.getPlaylist(item.id).then(response => {
-            dispatch({
-              type: "SET_PLAYLIST_ITEMS",
-              playlists_items: response,
+            spotify.getPlaylist(item.id).then(response => {
+                dispatch({
+                    type: "SET_PLAYLIST_ITEMS",
+                    playlists_items: response,
+                })
             })
-          })
+        
     }
 
     return (

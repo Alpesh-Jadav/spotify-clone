@@ -13,7 +13,7 @@ function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs, playlists, user }, dispatch] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
 
-    console.log('playlists ========> ', playlists)
+    // console.log('playlists ========> ', playlists)
 
     useEffect(() => {
         
@@ -30,7 +30,7 @@ function Body({ spotify }) {
               })
             })
             
-            console.log('id => ',song_id)
+            // console.log('id => ',song_id)
            }
 
     }, [])
@@ -41,9 +41,6 @@ function Body({ spotify }) {
 
         if(playlists_items) {
            
-            console.log('playlists ========> ', playlists)
-
-            console.log('upgraded', playlists?.items[0]?.id)
 
 
            if(playlists_items){
@@ -51,8 +48,7 @@ function Body({ spotify }) {
             const total = totalDuration(playlists_items);
 
             setDuration(total)
-
-            console.log('time =====> ', playlists_items.time)
+            console.log('total => ', total)
 
            }       
            
@@ -83,7 +79,7 @@ function Body({ spotify }) {
                             <div className="duration"><p>{playlists_items?.owner?.display_name}</p>
                             
                             {
-                                duration !== 0 ? (<><h1>{'•'}</h1><span className="total-hours">{msToTotalTime(duration)}</span></>) : <div></div>
+                                duration !== 0  ? (<><h1>{'•'}</h1><span className="total-hours">{msToTotalTime(duration)}</span></>) : <div></div>
                             }
                             
                             </div>

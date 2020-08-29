@@ -26,7 +26,7 @@ function Sidebar() {
             <div className="sidebar__songList">
                 {
                     playlists?.items?.map((playlist) => (
-                        <SidebarOption title={playlist.name} />
+                        <SidebarOption link title={playlist.name} />
                     ))
                 }
             </div>
