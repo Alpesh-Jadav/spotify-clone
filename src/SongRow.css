@@ -53,3 +53,27 @@
 .songRow__details h5 {
 	opacity: .7;
 }
+
+@media (max-width: 390px) {
+	.songRow{
+		padding: 10px 0;
+		margin-left: 0;
+	}
+	.songRow__info {
+		margin-left: 15px;
+	}
+	.songRow__details {
+		padding-right: 0;
+	}
+	.songRow__info h1 {
+		font-size: 14px;
+		width: 200px;
+	}
+	.songRow__info h5 {
+		font-size: 12px;
+		
+	}
+	.songRow__info p{
+		font-size: 10px;
+	}
+}

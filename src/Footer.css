@@ -96,9 +96,10 @@
 
 @media (max-width: 630px){
     .footer{
+        /* display: none; */
         padding: 0;
         height: 72px;
-        
+        z-index: 1;
     background-color: #1f1e1e;
     }
     .footer__container {

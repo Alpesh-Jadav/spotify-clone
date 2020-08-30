@@ -15,8 +15,8 @@ function SongRow({ track, add }) {
                     {!add && <h5>{msToTime(track.duration_ms)}</h5>}
                 </div>
                 <p>
-                    {track.artists.map((artist) => artist.name).join(", ")}
-                    {' • '}{track.album.name}
+                    {track.artists.map((artist) => artist.name).join(", ").substring(0,40) + " ..."}
+                    {' • '}{track.album.name.substring(0,22) + " ..."}
                 </p>
 
             </div>

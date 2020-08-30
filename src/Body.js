@@ -61,6 +61,7 @@ function Body({ spotify }) {
                         <div className="body__icons">
                             <PlayCircleFilledIcon className="body__playIcon" />
                             <MoreHorizIcon className="body__icon" />
+                            <button>SHUFFLE PLAY</button>
                         </div>
 
                         {playlists_items?.tracks.items.length > 0 ?
