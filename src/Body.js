@@ -98,7 +98,7 @@ function Body({ spotify }) {
             </> : <div className="body__container">
                     <Header spotify={spotify} />
 
-                    {playlists ? <h1>Your Playlists</h1> : <h1><span className="empty-playlist">Your playlist is Empty! <p>(Create your playlist on original spotify and return back this page)</p><br /></span>Reccomend For You</h1>}
+                    {playlists ? <h1 className="empty-title">Your Playlists</h1> : <h1 className="empty-title"><span className="empty-playlist">Your playlist is Empty! <p>(Create your playlist on original spotify and return back this page)</p><br /></span>Reccomend For You</h1>}
                     <div className="playlists">
 
                         {

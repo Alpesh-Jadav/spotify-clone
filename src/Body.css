@@ -173,5 +173,43 @@
 	.body {
 		flex: 1;
 	}
+	.empty-title {
+		font-size: 7vw;
+	}
+	.empty-playlist {
+		font-size: 5vw;
+	}
+	.empty-playlist p {
+		font-size: 4vw;
+	}
+
+	.body__container {
+		padding: 20px;
+		padding-top: 10px;
+	}
+
+	.body__info{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.body__info img{
+		margin-right: 0;
+		min-height: 150px;
+	}
+	.body__infoText strong{
+		display: none;
+	}
+	.body__infoText h2{
+		font-size: 23px;
+		text-align: center;
+		margin-top: 5px;
+	}
+	.body__infoText .duration {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 	

@@ -37,7 +37,18 @@
 	margin-left: 10px;
 }
 
-@media (max-width: 500px) {
-	.header {
+@media (max-width: 630px) {
+	.header{
+		margin-bottom: 15px;
+	}
+	.header__avatar {
+		width: 30px !important;
+		height: 30px !important;
+	}
+	.header__left {
+		display: none;
+	}
+	.header__right{
+		font-size: 12px;
 	}
 }
