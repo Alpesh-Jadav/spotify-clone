@@ -1,10 +1,21 @@
+##### This project is currently not mobile friendly, work is in progress☺☺☺  
 
-### NOTE: This project is in development state. It is not full project.
+## This project has many lerning content for bigginers in react web development . what you lern in it:
 
-<br /><br /><br /><br /><br />
+#### 1] React Components
+
+#### 2] How to use Spotify API
+
+#### 3] Spotify login
+
+#### 4] React Context API
+
+#### 5] Components Management
+
+#### 6] Material-ui design
 
 
-
+<br /><br />
 
 
 
