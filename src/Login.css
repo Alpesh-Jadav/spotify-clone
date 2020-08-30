@@ -7,6 +7,7 @@
 
 .login > img {
 	width: 80%;
+	min-width: 300px;
 }
 
 .login > a {
@@ -20,4 +21,13 @@
 .login > a:hover {
 	transition: 100ms ease-in-out;
 	background-color: #0f943d;
+}
+
+@media (max-width: 630px) {
+	.login a{
+		width: 150px;
+		font-size: 12px;
+		display: grid;
+		place-items: center;
+	}
 }

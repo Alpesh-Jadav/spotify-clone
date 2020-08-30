@@ -9,8 +9,12 @@ import SpeakerIcon from '@material-ui/icons/Speaker';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import { Grid, Slider } from '@material-ui/core';
-
-
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import GetAppIcon from '@material-ui/icons/GetApp';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 function Footer() {
 
 
@@ -49,6 +53,29 @@ function Footer() {
                     </Grid>
                 </div>
             </div>
+       
+        <div className="footer_playing">
+            <div className="first-row">
+            <FavoriteBorderOutlinedIcon />
+            <div className="footer__songInfo">
+                <h5>Vaaste • </h5>
+                <h5 className="song-name">Dhvani Bhanushali</h5>
+
+            </div>
+            <PlayArrowIcon />
+            </div>
+            <div className="sec-row">
+                <div className="home-icon footer__icon">
+                    <HomeIcon  className="mu-icon"/><h5>Home</h5>
+                </div>
+                <div className="search-icon footer__icon">
+                    <SearchIcon className="mu-icon" /><h5>Search</h5>
+                </div>
+                <div className="getApp-icon footer__icon">
+                    <GetAppIcon className="mu-icon" /><h5>Get App</h5>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

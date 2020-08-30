@@ -27,3 +27,9 @@
 .sidebar__songList::-webkit-scrollbar {
 	display: none;
 }
+
+@media (max-width: 630px) {
+	.sidebar {
+		display: none;
+	}
+}

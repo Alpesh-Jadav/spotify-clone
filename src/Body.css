@@ -168,3 +168,10 @@
 	font-weight: 500;
 	opacity: .7;
 }
+
+@media (max-width: 630px) {
+	.body {
+		flex: 1;
+	}
+}
+	
