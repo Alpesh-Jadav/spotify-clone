@@ -84,7 +84,8 @@ function Body({ spotify }) {
                                         <h2>It's a bit empty here...</h2>
                                         <h5>Let's find some songs for your playlist</h5>
                                         <button>NEW RELEASES</button>
-                                    </section></div>
+                                    </section>
+                                </div>
 
                                 <h2 className="recommend-title">Recommended Songs</h2>
                                 <div className="body__emptySongList">
