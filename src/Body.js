@@ -15,7 +15,11 @@ function Body({ spotify }) {
     const [duration, setDuration] = useState(0)
 
     useEffect(() => {
-        scroll.scrollTo(600)
+        window.scroll({
+            top: 100,
+            left: 100,
+            behavior: 'smooth'
+          });
         console.log('playlists items changed')
       }, [playlists_items, playlists])
 
