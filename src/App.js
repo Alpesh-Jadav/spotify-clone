@@ -8,7 +8,7 @@ import { useDataLayerValue } from './DataLayer';
 
 const spotify = new SpotifyWebApi();
 function App() {
-	const [ { user }, dispatch ] = useDataLayerValue();
+	const [ { user, playlists_items }, dispatch ] = useDataLayerValue();
 
 	useEffect(() => {
 		const hash = getTokenFromUrl();
@@ -45,6 +45,11 @@ function App() {
 			});
 		}
 	}, []);
+	useEffect(() => {
+		
+		window.scrollTo(0, 0)
+		
+	}, [playlists_items])
 	return <div className="app">{user ? <Player spotify={spotify} /> : <Login />}</div>;
 }
 

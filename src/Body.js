@@ -13,9 +13,15 @@ function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs, playlists }] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        console.log('playlists items changed ')
+      }, [playlists_items, playlists])
 
     useEffect(() => {
 
+            
+        
 
         if (playlists_items) {
 
@@ -77,7 +83,7 @@ function Body({ spotify }) {
                                     ))}
                                 </div></>
                             ) :
-                            (<div className="empty-list">
+                            (<>
                                 <div className="section-container">
                                     <section>
                                         <AlbumOutlinedIcon className="disc-icon" />
@@ -93,7 +99,7 @@ function Body({ spotify }) {
                                         <SongRow add={true} track={item.track} />
                                     ))}
                                 </div>
-                            </div>)
+                            </>)
                         }
                     </div>
                 </div>

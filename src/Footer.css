@@ -92,7 +92,9 @@
     cursor: pointer;
 }
 
-
+.footer_playing{
+    display: none;
+}
 
 @media (max-width: 630px){
     .footer{

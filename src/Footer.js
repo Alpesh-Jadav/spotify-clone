@@ -15,8 +15,19 @@ import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import { useDataLayerValue } from './DataLayer';
 function Footer() {
 
+    const [{}, dispatch] = useDataLayerValue();
+
+    const changePlaylist = () => {
+
+        dispatch({
+            type: "SET_PLAYLIST_ITEMS",
+            playlists_items: null,
+        })
+
+    }
 
     return (
         <div className="footer">
@@ -65,7 +76,7 @@ function Footer() {
             <PlayArrowIcon />
             </div>
             <div className="sec-row">
-                <div className="home-icon footer__icon">
+                <div onClick={() => changePlaylist()} className="home-icon footer__icon">
                     <HomeIcon  className="mu-icon"/><h5>Home</h5>
                 </div>
                 <div className="search-icon footer__icon">
