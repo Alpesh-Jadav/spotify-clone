@@ -168,6 +168,9 @@
 	font-weight: 500;
 	opacity: .7;
 }
+.body__icons button{
+	display: none;
+}
 
 @media (max-width: 390px) {
 	.body {
@@ -216,6 +219,7 @@
 	}
 	.body__dark {
 		padding: 0 10px;
+		padding-bottom: 20px;
 		margin-top: 290px;
 		background-color: black;
 		z-index: 1;
@@ -227,6 +231,8 @@
 		padding-bottom: 12px;
 		background-color: rgb(29, 28, 28);
 		/* z-index: -1; */
+		width:100%;
+		height: 400px;
 		
 	}
 	.body__icons .body__icon,.body__icons .body__playIcon{
@@ -238,6 +244,7 @@
 	}
 
 	.body__icons button{
+		display: flex;
 	background-color: #0caa21;
 	padding: 10px 20px;
 	border: none;
