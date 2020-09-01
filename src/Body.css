@@ -172,7 +172,7 @@
 	display: none;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 767px) {
 	.body {
 		flex: 1;
 		background-color: rgb(20, 18, 18);
@@ -199,11 +199,15 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding-top: 40px;
 	}
 	.body__info img{
 		margin-right: 0;
 		/* height: 6vw; */
 		min-height: 150px;
+	}
+	.body__infoText {
+		/* padding-bottom: 10px; */
 	}
 	.body__infoText strong{
 		display: none;
@@ -221,10 +225,9 @@
 	.body__dark {
 		padding: 0 10px;
 		padding-bottom: 20px;
-		margin-top: 290px;
+		margin-top: 300px;
 		background-color: black;
 		z-index: 1 !important;
-		/* width: 100%; */
 	}
 	.body__grey{
 		position: absolute;
@@ -258,12 +261,7 @@
 		margin: 0;
 		
 	}
-	html:not([data-scroll='0']) {
-		padding-top: 3em;
-	  }
-	  html:not([data-scroll='0']) header {
-		position: fixed;
-	  }
+	
 
 	  .body__emptySongList{
 		  padding-bottom: 80px;
@@ -288,14 +286,8 @@
 	.recommend-title {
 		font-size: 18px;
 		margin-bottom: 5px;
+		margin-top: 40px;
 		opacity: .8;
 		color: #0caa21;
 	}
-	/* .empty-list{
-		background-color: black;
-	}
-	.body__emptySongList{
-		background-color: black;
-		width: 100%;
-	} */
 }

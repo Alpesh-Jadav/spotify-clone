@@ -96,7 +96,7 @@
     display: none;
 }
 
-@media (max-width: 630px){
+@media (max-width: 767px){
     .footer{
         /* display: none; */
         padding: 0;

@@ -23,7 +23,7 @@
 	background-color: #0f943d;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 767px) {
 	.login a{
 		width: 150px;
 		font-size: 12px;

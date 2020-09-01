@@ -54,7 +54,7 @@
 	opacity: .7;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 767px) {
 	.songRow{
 		padding: 10px 0;
 		margin-left: 0;

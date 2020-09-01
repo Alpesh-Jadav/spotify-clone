@@ -38,11 +38,21 @@
 }
 
 
-@media (max-width: 690px) {
+@media (max-width: 767px) {
 
 	.header{
-		margin-bottom: 15px;
-		justify-content: flex-end;	
+		position: fixed;
+		/* margin-bottom: 15px; */
+		/* justify-content: flex-end;	 */
+		/* width: 100%; */
+		background-color: rgb(29, 28, 28);
+		width: 100vw;
+		right: 0;
+		top: 0;
+		height: 45px;
+		z-index: 90;
+		display: flex;
+		justify-content: flex-end;
 	}
 	.header__avatar {
 		width: 30px !important;
@@ -53,6 +63,7 @@
 	}
 	.header__right{
 		font-size: 12px;
+	
 	}
 	
 }
