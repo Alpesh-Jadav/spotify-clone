@@ -251,7 +251,12 @@ section button:hover {
 		font-weight: 800;
 		color: white;
 		margin-top: -20px;
+		cursor: pointer;
+		outline: none;
 	}
+	.body__icons button:hover{
+		background-color: #19b82e;
+	} 
 	.body__songs {
 		margin: 0;
 	}
