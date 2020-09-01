@@ -4,7 +4,6 @@ import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import './Sidebar.css'
-import MenuIcon from '@material-ui/icons/Menu';
 import SidebarOption from './SidebarOption'
 import { useDataLayerValue } from './DataLayer';
 function Sidebar() {

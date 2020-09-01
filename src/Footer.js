@@ -9,7 +9,6 @@ import SpeakerIcon from '@material-ui/icons/Speaker';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import { Grid, Slider } from '@material-ui/core';
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
@@ -18,7 +17,7 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import { useDataLayerValue } from './DataLayer';
 function Footer() {
 
-    const [{ }, dispatch] = useDataLayerValue();
+    const [{}, dispatch] = useDataLayerValue();
     const [like, setLike] = useState(false)
     const [play, setPlay] = useState(false)
     const changePlaylist = () => {
@@ -85,13 +84,13 @@ function Footer() {
                 </div>
                 <div className="sec-row">
                     <div onClick={() => changePlaylist()} className="home-icon footer__icon">
-                        <HomeIcon className="mu-icon" /><h5>Home</h5>
+                         <HomeIcon className="mu-icon" /><h5>Home</h5>
                     </div>
                     <div className="search-icon footer__icon">
-                        <SearchIcon className="mu-icon" /><h5>Search</h5>
+                         <SearchIcon className="mu-icon" /><h5>Search</h5>
                     </div>
                     <div className="getApp-icon footer__icon">
-                        <GetAppIcon className="mu-icon" /><h5>Get App</h5>
+                         <GetAppIcon className="mu-icon" /><h5>Get App</h5>
                     </div>
                 </div>
             </div>

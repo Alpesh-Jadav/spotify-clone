@@ -13,9 +13,10 @@ function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs, playlists }] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
 
-   
 
     useEffect(() => {
+
+        window.scrollTo(0, 0);
 
         if (playlists_items) {
 
@@ -65,13 +66,13 @@ function Body({ spotify }) {
                         {playlists_items?.tracks.items.length > 0 ?
                             (<><div className="body__songList">
                                 {playlists_items?.tracks.items.map(item => (
-                                    <SongRow key={item.id} track={item.track} />
+                                    <SongRow key={item.track.id} track={item.track} />
                                 ))}
                             </div>
                                 <h2 className="recommend-title">Recommended Songs</h2>
                                 <div className="body__emptySongList">
                                     {reccomend_songs?.tracks.items.map(item => (
-                                        <SongRow add={true} track={item.track} />
+                                        <SongRow key={item.track.id} add={true} track={item.track} />
                                     ))}
                                 </div></>
                             ) :
