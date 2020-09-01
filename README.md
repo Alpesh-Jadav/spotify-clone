@@ -15,6 +15,8 @@
 
 #### 7] Mobile Friendly design
 
+#### 8] React Hooks
+
 
 <br /><br />
 
