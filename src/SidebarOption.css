@@ -39,3 +39,11 @@
 .like-icon {
 	color: rgb(96, 83, 167) !important;
 }
+
+
+@media (max-width: 690px) {
+	
+	.mid-line {
+		margin: 10px 0 !important;
+	}
+}

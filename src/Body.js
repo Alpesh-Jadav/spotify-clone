@@ -8,20 +8,12 @@ import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow';
 import { totalDuration, msToTotalTime } from './util';
 import Playlist from './Playlist';
-import { animateScroll as scroll } from 'react-scroll';
 
 function Body({ spotify }) {
     const [{ playlists_items, reccomend_songs, playlists }] = useDataLayerValue();
     const [duration, setDuration] = useState(0)
 
-    useEffect(() => {
-        window.scroll({
-            top: 100,
-            left: 100,
-            behavior: 'smooth'
-          });
-        console.log('playlists items changed')
-      }, [playlists_items, playlists])
+   
 
     useEffect(() => {
 

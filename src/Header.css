@@ -8,7 +8,7 @@
 .header__left {
 	flex: 0.5;
 	min-width: 70px;
-	background-color: white;
+	background-color: rgb(139, 139, 139);
 	color: gray;
 	border-radius: 30px;
 	display: flex;
@@ -36,16 +36,13 @@
 .header__right > h4 {
 	margin-left: 10px;
 }
-.hamburger{
-	display: none;
-}
+
 
 @media (max-width: 690px) {
-	.hamburger{
-		display: flex;
-	}
+
 	.header{
-		margin-bottom: 15px;		
+		margin-bottom: 15px;
+		justify-content: flex-end;	
 	}
 	.header__avatar {
 		width: 30px !important;

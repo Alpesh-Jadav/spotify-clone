@@ -18,8 +18,6 @@ function SidebarOption({ title, Icon, className, link }) {
         playlists_items: response,
       })
     })
-    
-    // window.scrollTo(0, 0)
 
 
   }

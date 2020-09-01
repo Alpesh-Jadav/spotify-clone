@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined'; import SearchIcon from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import './Sidebar.css'
+import MenuIcon from '@material-ui/icons/Menu';
 import SidebarOption from './SidebarOption'
 import { useDataLayerValue } from './DataLayer';
 function Sidebar() {
 
     const [{ playlists }, dispatch] = useDataLayerValue();
-
+    const [toggle, setToggle] = useState(false)
     const changePlaylist = () => {
 
         dispatch({
@@ -18,11 +19,20 @@ function Sidebar() {
         })
 
     }
+    const toggleSidebar = () => {
+        setToggle(!toggle);
+    }
     return (
         playlists ?
-            <div className="sidebar">
+            <div className={toggle ? 'sidebar active-sidebar' : 'sidebar'}>
+             <div className="mini_container">
                 <img onClick={() => changePlaylist()} className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify" />
-
+                <div onClick={toggleSidebar} className="hamburger">
+                    <div className={ toggle ? 'line1 cross1': 'line1'}></div>
+                    <div className={ toggle ? 'line2 cross2': 'line2'}></div>
+                    <div className={ toggle ? 'line3 cross3': 'line3'}></div> 
+                </div>
+               </div>
                 <SidebarOption title="Home" Icon={HomeOutlinedIcon} />
                 <SidebarOption title="Search" Icon={SearchIcon} />
                 <SidebarOption title="Your Library" Icon={LibraryMusicIcon} />

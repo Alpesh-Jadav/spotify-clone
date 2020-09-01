@@ -175,8 +175,8 @@
 @media (max-width: 390px) {
 	.body {
 		flex: 1;
-		/* margin-top: 200px; */
 		background-color: rgb(20, 18, 18);
+
 	}
 	.empty-title {
 		font-size: 7vw;
