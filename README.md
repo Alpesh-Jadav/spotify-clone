@@ -1,4 +1,3 @@
-##### This project is currently not mobile friendly, work is in progress☺☺☺  
 
 ## This project has many lerning content for bigginers in react web development . what you lern in it:
 
@@ -13,6 +12,10 @@
 #### 5] Components Management
 
 #### 6] Material-ui design
+
+#### 7] Mobile Friendly design
+
+#### 8] React Hooks
 
 
 <br /><br />
