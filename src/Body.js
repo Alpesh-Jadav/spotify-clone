@@ -17,16 +17,11 @@ function Body({ spotify }) {
 
     useEffect(() => {
 
-            
-        
-
         if (playlists_items) {
 
             const total = totalDuration(playlists_items);
             setDuration(total)
-
         }
-
 
     }, [playlists_items]);
 

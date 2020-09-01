@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 767px) {
-	.login a{
+	.login a {
 		width: 150px;
 		font-size: 12px;
 		display: grid;

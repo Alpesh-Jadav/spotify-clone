@@ -114,7 +114,7 @@
 	display: grid;
 	place-items: center;
 }
- section {
+section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -123,20 +123,20 @@
 	min-width: 250px !important;
 	color: white;
 }
- section .disc-icon {
+section .disc-icon {
 	font-size: 5vw !important;
 }
- section h2 {
+section h2 {
 	font-size: 2.1vw;
 	margin-top: 12px;
 	word-spacing: -2px;
 }
- section h5 {
+section h5 {
 	font-size: 1.6vw;
 	margin-top: 3px;
 	font-weight: 400;
 }
- section button {
+section button {
 	padding: 12px 20px;
 	margin-top: 15px;
 	border-radius: 20px;
@@ -149,7 +149,7 @@
 	cursor: pointer;
 	outline: none;
 }
- section button:hover {
+section button:hover {
 	transition: 100ms ease-in;
 	transform: scale(1.09);
 }
@@ -168,7 +168,7 @@
 	font-weight: 500;
 	opacity: .7;
 }
-.body__icons button{
+.body__icons button {
 	display: none;
 }
 
@@ -176,11 +176,10 @@
 	.body {
 		flex: 1;
 		background-color: rgb(20, 18, 18);
-
 	}
 	.empty-title {
 		font-size: 7vw;
-		
+		margin-top: 40px;
 	}
 	.empty-playlist {
 		font-size: 5vw;
@@ -194,25 +193,22 @@
 		padding-top: 10px;
 	}
 
-	.body__info{
+	.body__info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding-top: 40px;
 	}
-	.body__info img{
+	.body__info img {
 		margin-right: 0;
-		/* height: 6vw; */
 		min-height: 150px;
 	}
-	.body__infoText {
-		/* padding-bottom: 10px; */
-	}
-	.body__infoText strong{
+
+	.body__infoText strong {
 		display: none;
 	}
-	.body__infoText h2{
+	.body__infoText h2 {
 		font-size: 23px;
 		text-align: center;
 		margin-top: 5px;
@@ -229,56 +225,52 @@
 		background-color: black;
 		z-index: 1 !important;
 	}
-	.body__grey{
+	.body__grey {
 		position: absolute;
 		top: 0;
 		padding-bottom: 12px;
 		background-color: rgb(29, 28, 28);
-		/* z-index: -1; */
-		width:100%;
+		width: 100%;
 		height: 128px;
-		
 	}
-	.body__icons .body__icon,.body__icons .body__playIcon{
+	.body__icons .body__icon,
+	.body__icons .body__playIcon {
 		display: none;
 	}
-	.body__icons{
+	.body__icons {
 		display: grid;
 		place-items: center;
 	}
 
-	.body__icons button{
+	.body__icons button {
 		display: flex;
-	background-color: #0caa21;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 99px;
-	font-weight: 800;
-	color: white;
-	margin-top: -20px;
+		background-color: #0caa21;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 99px;
+		font-weight: 800;
+		color: white;
+		margin-top: -20px;
 	}
 	.body__songs {
 		margin: 0;
-		
 	}
-	
 
-	  .body__emptySongList{
-		  padding-bottom: 80px;
-		  color: white;
-	  }
-	  
-	  section {
-		  color: white;
-	  }
-	   section .disc-icon {
+	.body__emptySongList {
+		padding-bottom: 80px;
+		color: white;
+	}
+
+	section {
+		color: white;
+	}
+	section .disc-icon {
 		font-size: 30px !important;
 	}
-	 section h2 {
+	section h2 {
 		font-size: 14px;
-		
 	}
-	 section h5 {
+	section h5 {
 		font-size: 12px;
 		font-weight: 500;
 	}

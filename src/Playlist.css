@@ -6,7 +6,7 @@
 	background-color: rgba(43, 42, 42, 0.842);
 	margin-top: 30px;
 	display: flex;
-	margin-right: 35px;
+	margin-right: 20px;
 	cursor: pointer;
 
 	box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
@@ -32,21 +32,4 @@
 .playlist__content span {
 	font-size: 12px;
 	opacity: .7;
-}
-
-@media (max-width: 767px) {
-	/* .playlist{
-		width: 230px;
-	height: 300px;
-	}
-	.playlist__content {
-
-	}
-	.cover{
-		height: 100px;
-		width: 100px;
-	}
-	.playlist__content h3 {
-		font-size: 10px;
-	} */
 }

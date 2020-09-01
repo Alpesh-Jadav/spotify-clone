@@ -30,7 +30,6 @@
 
 @media (max-width: 767px) {
 	.sidebar {
-		/* display: none; */
 		position: absolute;
 		height: 100vh;
 		transform: translateX(-240px);
@@ -43,11 +42,10 @@
 		transform: translateX(0);
 		transition: 200ms ease-in;
 	}
-	.mini_container{
+	.mini_container {
 		display: flex;
-		/* align-items: center; */
 	}
-	.hamburger{
+	.hamburger {
 		transform: translateX(55px);
 		background-color: black;
 		width: 50px;
@@ -59,17 +57,18 @@
 		border-top-right-radius: 20px;
 		border-bottom-right-radius: 20px;
 	}
-	
-	.sidebar__songList{
+
+	.sidebar__songList {
 		height: 200px !important;
 	}
-	.line1,.line2,.line3 {
+	.line1,
+	.line2,
+	.line3 {
 		width: 20px;
 		height: 1.6px;
 		background-color: #fff;
 		border-radius: 20%;
 		transition: 500ms ease-in;
-
 	}
 	.line2 {
 		margin: 5px 0;

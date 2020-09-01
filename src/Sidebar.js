@@ -26,7 +26,7 @@ function Sidebar() {
         playlists ?
             <div className={toggle ? 'sidebar active-sidebar' : 'sidebar'}>
              <div className="mini_container">
-                <img onClick={() => changePlaylist()} className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify" />
+                <img onClick={() => changePlaylist()} className="sidebar__logo" src="/assets/logo.jpg" alt="spotify" />
                 <div onClick={toggleSidebar} className="hamburger">
                     <div className={ toggle ? 'line1 cross1': 'line1'}></div>
                     <div className={ toggle ? 'line2 cross2': 'line2'}></div>
