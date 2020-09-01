@@ -37,8 +37,8 @@ function Body({ spotify }) {
                     <Header spotify={spotify} />
 
                     <div className="body__info">
-                        {playlists_items ? <img src={playlists_items.images.length > 0 ? playlists_items.images[0].url : "/assets/unknown.png"} alt="My Playlist" /> :
-                            <img src="/assets/unknown.png" alt="My Playlist" />
+                        {playlists_items ? <img src={playlists_items.images.length > 0 ? playlists_items.images[0].url : "/assets/unknown.jpg"} alt="My Playlist" /> :
+                            <img src="/assets/unknown.jpg" alt="My Playlist" />
                         }
                         <div className="body__infoText">
                             <strong>PLAYLIST</strong>
@@ -104,8 +104,8 @@ function Body({ spotify }) {
 
                         {
                             playlists ? playlists?.items?.map(item => (
-                                <Playlist key={item.id} coverPhoto={item.images.length > 0 ? item.images[0].url : '/assets/unknown.png'} owner={item.owner.display_name} name={item.name} item={item} />
-                            )) : reccomend_songs && <Playlist coverPhoto={reccomend_songs.images.length > 0 ? reccomend_songs.images[0].url : '/assets/unknown.png'} owner={reccomend_songs.owner.display_name} name={reccomend_songs.name} item={reccomend_songs} />
+                                <Playlist key={item.id} coverPhoto={item.images.length > 0 ? item.images[0].url : '/assets/unknown.jpg'} owner={item.owner.display_name} name={item.name} item={item} />
+                            )) : reccomend_songs && <Playlist coverPhoto={reccomend_songs.images.length > 0 ? reccomend_songs.images[0].url : '/assets/unknown.jpg'} owner={reccomend_songs.owner.display_name} name={reccomend_songs.name} item={reccomend_songs} />
                         }
 
 
